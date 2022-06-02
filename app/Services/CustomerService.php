@@ -4,28 +4,28 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\DataProvider\Eloquent\Customer;
+use App\DataProvider\CustomerRepositoryInterface;
+use App\Domain\Entity\Customer;
 
 class CustomerService
 {
+    private CustomerRepositoryInterface $customer;
+
+    public function __construct(CustomerRepositoryInterface $customer)
+    {
+        $this->customer = $customer;
+    }
 
     public function exists(string $name): bool
     {
-        $count = Customer::whereName($name)->count();
-        if ($count > 0) {
-            return true;
+        if (!$this->customer->findByName($name)) {
+            return false;
         }
-        return false;
+        return true;
     }
 
     public function store(string $name, string $address ): int
     {
-        $customer = Customer::create(
-            [
-                'name' => $name,
-                'address' => $address,
-            ]
-        );
-        return  (int)$customer->id;
+        return $this->customer->store(new Customer(null, $name, $address));
     }
 }
