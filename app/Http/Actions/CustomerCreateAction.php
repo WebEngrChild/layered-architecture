@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CustomerCreateAction
 {
-    private $customer;
+    private CustomerService $customer;
 
     public function __construct(CustomerService $customer)
     {

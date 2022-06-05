@@ -6,7 +6,7 @@ namespace App\Domain\Customer\Entity;
 
 class Customer
 {
-    private $id;
+    private ?int $id;
     private string $name;
     private string $address;
 

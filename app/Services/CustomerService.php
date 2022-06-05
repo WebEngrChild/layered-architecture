@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\DataProvider\CustomerRepositoryInterface;
+use App\Domain\Customer\Repository\CustomerRepositoryInterface;
 use App\Domain\Customer\Entity\Customer;
 
 class CustomerService

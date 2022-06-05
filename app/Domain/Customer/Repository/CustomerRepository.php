@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Domain\Customer\Repository;
 
-use \App\DataProvider\CustomerRepositoryInterface;
 use \App\DataProvider\Eloquent\Customer as EloquentCustomer;
 use App\Domain\Customer\Entity\Customer;
 
