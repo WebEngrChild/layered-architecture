@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers;
+namespace App\Http\Actions;
 
 use App\Services\CustomerService;
 use Illuminate\Http\Request;
@@ -17,7 +17,7 @@ class CustomerCreateAction
         $this->customer = $customer;
     }
 
-    public function  create (Request $request)
+    public function __invoke(Request $request): Response
     {
         if ($this->customer->exists($request->name)) {
             return response('', Response::HTTP_OK);

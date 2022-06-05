@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Entity;
+namespace App\Domain\Customer\Entity;
 
 class Customer
 {
-    protected ?int $id;
-    protected string $name;
-    protected string $address;
+    private $id;
+    private $name;
+    private $address;
 
     public function __construct(?int $id, string $name, string $address)
     {

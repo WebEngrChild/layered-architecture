@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Repository;
+namespace App\Domain\Customer\Repository;
 
 use \App\DataProvider\CustomerRepositoryInterface;
 use \App\DataProvider\Eloquent\Customer as EloquentCustomer;
-use App\Domain\Entity\Customer;
+use App\Domain\Customer\Entity\Customer;
 
 class CustomerRepository implements CustomerRepositoryInterface
 {
@@ -20,7 +20,7 @@ class CustomerRepository implements CustomerRepositoryInterface
     public function findByName(string $name): ?Customer
     {
         $record = $this->eloquentCustomer->whereName($name)->firts();
-        if($record === null) {
+        if ($record === null) {
             return null;
         }
 

@@ -6,7 +6,7 @@ namespace App\DataProvider\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends  Model
+class Customer extends Model
 {
     protected $fillable = [
         'name',

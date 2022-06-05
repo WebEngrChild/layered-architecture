@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\DataProvider;
 
-use App\Domain\Entity\Customer;
+use App\Domain\Customer\Entity\Customer;
 
 interface CustomerRepositoryInterface
 {

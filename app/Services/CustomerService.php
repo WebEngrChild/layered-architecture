@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\DataProvider\CustomerRepositoryInterface;
-use App\Domain\Entity\Customer;
+use App\Domain\Customer\Entity\Customer;
 
 class CustomerService
 {
-    private CustomerRepositoryInterface $customer;
+    private $customer;
 
     public function __construct(CustomerRepositoryInterface $customer)
     {
