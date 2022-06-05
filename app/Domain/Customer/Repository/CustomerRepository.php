@@ -10,7 +10,7 @@ use App\Domain\Customer\Entity\Customer;
 
 class CustomerRepository implements CustomerRepositoryInterface
 {
-    private $eloquentCustomer;
+    private EloquentCustomer $eloquentCustomer;
 
     public function __construct(EloquentCustomer $eloquentCustomer)
     {

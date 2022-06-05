@@ -7,8 +7,8 @@ namespace App\Domain\Customer\Entity;
 class Customer
 {
     private $id;
-    private $name;
-    private $address;
+    private string $name;
+    private string $address;
 
     public function __construct(?int $id, string $name, string $address)
     {
