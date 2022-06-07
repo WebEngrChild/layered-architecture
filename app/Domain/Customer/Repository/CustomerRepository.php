@@ -18,7 +18,7 @@ class CustomerRepository implements CustomerRepositoryInterface
 
     public function findByName(string $name): ?Customer
     {
-        $record = $this->eloquentCustomer->whereName($name)->firts();
+        $record = $this->eloquentCustomer->whereName($name)->first();
         if ($record === null) {
             return null;
         }
